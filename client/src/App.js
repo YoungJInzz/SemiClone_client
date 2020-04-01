@@ -1,14 +1,19 @@
-import React from "react";
-import Nav from "./components/navigation";
+import React, { memo } from "react";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
-function App() {
+const App = memo(() => {
   return (
-    <div className="App">
-      <>
-        <Nav />
-      </>
-    </div>
-  );
-}
+    <>
+      <div className="App">
+        <>
+          <Navigation />
 
-export default App;
+          <Footer />
+        </>
+      </div>
+    </>
+  );
+});
+
+export default memo(App);
