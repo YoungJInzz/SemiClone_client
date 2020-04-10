@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import Navigation from "./components/Navigation";
+import Main from "./components/main";
 import Footer from "./components/Footer";
 
 const App = memo(() => {
@@ -8,7 +9,7 @@ const App = memo(() => {
       <div className="App">
         <>
           <Navigation />
-
+          <Main />
           <Footer />
         </>
       </div>

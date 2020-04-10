@@ -21,13 +21,7 @@ const navigation = memo(() => {
                 <a href="#MyCgv">MyCGV</a>
               </li>
               <li>
-                <a href="#VipLounge">VIP LOUNGE</a>
-              </li>
-              <li>
-                <a href="#ClubService">Club서비스</a>
-              </li>
-              <li>
-                <a href="#CustomerService">고객센터</a>
+                <a href="#GiftShop">기프트샵</a>
               </li>
             </ul>
           </nav>
@@ -36,4 +30,4 @@ const navigation = memo(() => {
   );
 });
 
-export default navigation;
+export default memo(navigation);

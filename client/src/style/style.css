@@ -75,6 +75,124 @@
     color: white;
 }
 
+/* Main */
+.main-container{
+    position: relative;
+    top: 100px;
+    left: 110px;
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 1280px;
+}
+
+.main-container > ul{
+    display: block;
+}
+
+.main-container > ul::before,
+.main-container > ul::after{
+    content: '';
+    display: table;
+}
+
+.main-container > ul::after{
+    clear: both;
+}
+
+.main-container > ul li{
+    float: left;
+    width:245px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+.main-container > ul li.first{
+    margin-left: 0;
+}
+
+.main-container ul li .movie-list-info{
+    overflow: hidden;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 352px;
+    border-radius: 5px;
+    background-color: #24202b;
+}
+
+.main-container>ul li .movie-list-info .rank{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    color: #fff;
+    padding: 10px 0 0 15px;
+    line-height: 1.1;
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Roboto';
+    font-weight: 300;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+
+.main-container>ul li .movie-list-info img.poster{
+    display: block;
+    width: 245px;
+    height: 352px;
+    border-radius: 5px;
+}
+
+.main-container>ul li .movie-list-info .wrap{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 25px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.main-container>ul li .movie-list-info .wrap:hover,
+.main-container>ul li .movie-list-info .wrap:focus{
+    color:#fff;
+    text-decoration: none;
+}
+
+.main-container>ul li .movie-list-info .wrap .summary{
+    overflow: hidden;
+    height: 152px;
+}
+
+.btn-util{
+    margin: 5px 10px 10px 5px;
+}
+
+.book{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.main-container>ul li .btn-util .book .button{
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.main-container>ul li .btn-util .case.col-2 .button{
+    width: 50%;
+    border-radius: 0 4px 4px 0;
+}
+
+.main-container>ul li .btn-util .case.col-2 .button:first-child{
+    border-radius: 4px 0 0 4px;
+}
+
 /* Footer */
 #footer{
     position: fixed;
