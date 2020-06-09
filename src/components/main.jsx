@@ -1,189 +1,111 @@
-import React, { memo } from "react";
-import Movie1 from "../resources/movie1.jpg";
-import Movie2 from "../resources/movie2.jpg";
-import Movie3 from "../resources/movie3.jpg";
-import Movie4 from "../resources/movie4.jpg";
-import Plus from "../resources/ico-more-cross-gray.png";
-import { withStyles,makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import React, { useState, useRef, useEffect } from "react";
+import Logo from "../resources/logowhite.svg";
+import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { IoMdPower } from "react-icons/io";
+import { BsCircleFill, BsCircle } from "react-icons/bs";
+const Main = () => {
+  const [step, setStep] = useState("");
+  const [toggleState, setToggleState] = useState(true);
+  const handleStep = (x) => {
+    if (step === x) {
+      setStep("");
+    } else setStep(x);
+  };
+  const ref1 = useRef();
+  const ref2 = useRef();
+  const ref3 = useRef();
 
-const StyleButton = withStyles((theme) => ({
-  root: {
-    color: 'white',
-    backgroundColor: "black",
-    '&:hover': {
-      backgroundColor: "gray",
-    },
-    justifyContent:'center'
-  },
-}))(Button);
-
-const useStyles = makeStyles((theme) => ({
-  likebutton: {
-    width:'80px'
-  },
-  bookbutton:{
-    width:'140px'
-  }
-}));
-
-const main = memo(() => {
-  const classes = useStyles();
-  return (    
-    <>
-      <div className="main-container clearfix">
-        <p>박스오피스</p>
-        <a href="#">
-          더 많은 영화보기
-          <img className="plus" src={Plus} alt="더 많은 영화보기" />
-          </a>
-        <ul className="movie-list">
-          <li className="first">
-            <a className="movie-list-info" href="#">
-              <p className="rank">1</p>
-              <img className="poster" src={Movie1} alt="영화" />
-              <div className="warp">
-                <div className="summary">
-                  "황홀한 사랑, 순수한 희망, 격렬한 열정..."
-                  <br />
-                  "이 곳에서 모든 감정이 폭발한다!"
-                  <br />
-                  "꿈을 꾸는 사람들을 위한 별들의 도시 ‘라라랜드’. 재즈
-                  피아니스트 ‘세바스찬’(라이언 고슬링)과 배우 지망생 ‘미아’(엠마
-                  스톤), 인생에서 가장 빛나는 순간 만난 두 사람은 미완성인
-                  서로의 무대를 만들어가기 시작한다."
-                </div>
-              </div>
-            </a>
-            <div className="btn-util">
-              <StyleButton variant="contained" color="primary" className={classes.likebutton}>
-                1.2k
-              </StyleButton>
-              <div className="book">
-                <StyleButton
-                  variant="contained"
-                  color="primary"
-                  className={classes.bookbutton}
-                  title="영화예매"
-                >
-                  예매
-                </StyleButton>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <a className="movie-list-info" href="#">
-              <p className="rank">2</p>
-              <img className="poster" src={Movie2} alt="영화" />
-              <div className="warp">
-                <div className="summary">
-                  "[오즈의 마법사]의 영원한 '도로시'"
-                  <br />
-                  "시대를 초월한 히트송 '오버 더 레인보우'의 주인공"
-                  <br />
-                  "20세기 최고의 여배우 주디 갈랜드!"
-                  <br />
-                  <br />
-                  "그녀는 자신의 모든 것을 담은"
-                  <br />
-                  "생애 마지막 무대를 런던에서 준비하는데..."
-                  <br />
-                  <br />
-                  "모두가 숨죽인 가운데 막이 오르고"
-                  <br />
-                  "레전드 쇼가 시작된다."
-                </div>
-              </div>
-            </a>
-            <div className="btn-util">
-              <StyleButton variant="contained" color="primary" className={classes.likebutton}>
-                1.2k
-              </StyleButton>
-              <div className="book">
-                <StyleButton
-                  variant="contained"
-                  color="primary"
-                  className={classes.bookbutton}
-                  title="영화예매"
-                >
-                  예매
-                </StyleButton>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <a className="movie-list-info" href="#">
-              <p className="rank">3</p>
-              <img className="poster" src={Movie3} alt="영화" />
-              <div className="warp">
-                <div className="summary">
-                  "황홀한 사랑, 순수한 희망, 격렬한 열정..."
-                  <br />
-                  "이 곳에서 모든 감정이 폭발한다!"
-                  <br />
-                  "꿈을 꾸는 사람들을 위한 별들의 도시 ‘라라랜드’. 재즈
-                  피아니스트 ‘세바스찬’(라이언 고슬링)과 배우 지망생 ‘미아’(엠마
-                  스톤), 인생에서 가장 빛나는 순간 만난 두 사람은 미완성인
-                  서로의 무대를 만들어가기 시작한다."
-                </div>
-              </div>
-            </a>
-            <div className="btn-util">
-              <StyleButton variant="contained" color="primary" className={classes.likebutton}>
-                1.2k
-              </StyleButton>
-              <div className="book">
-                <StyleButton
-                  variant="contained"
-                  color="primary"
-                  className={classes.bookbutton}
-                  title="영화예매"
-                >
-                  예매
-                </StyleButton>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <a className="movie-list-info" href="#">
-              <p className="rank">4</p>
-              <img className="poster" src={Movie4} alt="영화" />
-              <div className="warp">
-                <div className="summary">
-                  "황홀한 사랑, 순수한 희망, 격렬한 열정..."
-                  <br />
-                  "이 곳에서 모든 감정이 폭발한다!"
-                  <br />
-                  "꿈을 꾸는 사람들을 위한 별들의 도시 ‘라라랜드’. 재즈
-                  피아니스트 ‘세바스찬’(라이언 고슬링)과 배우 지망생 ‘미아’(엠마
-                  스톤), 인생에서 가장 빛나는 순간 만난 두 사람은 미완성인
-                  서로의 무대를 만들어가기 시작한다."
-                </div>
-              </div>
-            </a>
-            <div className="btn-util">
-              <StyleButton variant="contained" color="primary" className={classes.likebutton}>
-                1.2k
-              </StyleButton>
-              <div className="book">
-                <StyleButton
-                  variant="contained"
-                  color="primary"
-                  className={classes.bookbutton}
-                  title="영화예매"
-                >
-                  예매
-                </StyleButton>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </>
+  useEffect(() => {
+    function watchResize() {
+      window.addEventListener("resize", setPayResultPosition);
+    }
+    watchResize();
+    return () => {
+      window.removeEventListener("resize", setPayResultPosition);
+    };
+  });
+  const setPayResultPosition = () => {
+    if (window.innerWidth < 1415) {
+      ref1.current.style.transform = "translateX(-100%)";
+      ref2.current.style.transform = "translateX(-100%)";
+    } else {
+      ref1.current.style.transform = "translateX(0%)";
+      ref2.current.style.transform = "translateX(0%)";
+    }
+  };
+  const toggle = () => {
+    if (toggleState === false) {
+      ref1.current.style.transform = "translateX(0%)";
+      ref2.current.style.transform = "translateX(0%)";
+      setToggleState(true);
+    } else {
+      ref1.current.style.transform = "translateX(-100%)";
+      ref2.current.style.transform = "translateX(-100%)";
+      setToggleState(false);
+    }
+  };
+  return (
+    <div>
+      <header className="main-header ">
+        <a className="logotag" href="http://www.cinerium.net/" ref={ref1}>
+          <img className="logo" src={Logo} alt=""></img>
+        </a>
+        <nav className="navbar">
+          <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
+        </nav>
+      </header>
+      <aside className="main-sidebar" ref={ref2}>
+        <section className="login">
+          <div className="loginBtn">
+            <IoMdPower className="powerIcon" />
+          </div>
+          <div className="loginForm">
+            <input className="loginInput" type="text" placeholder="id"></input>
+            <input
+              className="loginInput"
+              type="password"
+              placeholder="password"
+            ></input>
+          </div>
+        </section>
+        <div className="menuTitle"> Menu</div>
+        <section className="sidebar">
+          <ul>
+            <li className="nav-li">
+              <BsCircleFill className="circleFillIcon" />
+              영화(개발중)
+            </li>
+            <li className="nav-li" onClick={() => handleStep("booking")}>
+              <BsCircleFill className="circleFillIcon" />
+              예매
+            </li>
+            <ul className={step === "booking" ? " show" : "hide"}>
+              <Link to="booking">
+                <li className="nav-child-li">
+                  <BsCircle className="circleIcon" />
+                  빠른예매
+                </li>
+              </Link>
+              <Link to="timetable">
+                <li className="nav-child-li">
+                  <BsCircle className="circleIcon" />
+                  상영시간표
+                </li>
+              </Link>
+            </ul>
+            <li className="nav-li">
+              <BsCircleFill className="circleFillIcon" />
+              극장(개발중)
+            </li>
+            <li className="nav-li">
+              <BsCircleFill className="circleFillIcon" />
+              이벤트(개발중)
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </div>
   );
-});
-
-export default memo(main);
+};
+export default Main;

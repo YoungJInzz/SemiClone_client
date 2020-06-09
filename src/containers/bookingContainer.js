@@ -30,6 +30,8 @@ import {
   setBookedToEmpty,
 } from "../modules/booking";
 import Booking from "../components/booking";
+import dotenv from "dotenv";
+dotenv.config();
 
 const BookingConatainer = ({
   initState,
@@ -88,6 +90,7 @@ const BookingConatainer = ({
   setBookedToEmpty,
 }) => {
   useEffect(() => {
+    console.log("env", process.env.host);
     initState();
     selectDate("");
     selectTheater("");

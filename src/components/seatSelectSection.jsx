@@ -11,12 +11,10 @@ const Seatselect2Section = ({
   theater,
   timeData,
   date,
-  screeninfo,
   person,
   selectAdult,
   selectTeen,
   selectSenior,
-  seatArr,
   userId,
   seatSelected,
   seatSelectedIndex,
@@ -30,12 +28,9 @@ const Seatselect2Section = ({
   ticketTokens,
   setBookedToEmpty,
 }) => {
-  const [screen, setScreen] = useState("");
-  const [layer, setLayer] = useState("");
   // const [seatArrs, setSeatArrs] = useState([]);
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
-  const [emptySeat, setEmptySeat] = useState("");
   const [dateStr, setDateStr] = useState("");
 
   useEffect(() => {
@@ -77,7 +72,7 @@ const Seatselect2Section = ({
   const refresh = () => {
     let selectedId = selectedSeats.map((item) => item.ticketId);
 
-    axios.patch("http://127.0.0.1:8005/ticket/ticketstate", {
+    axios.patch("http://54.180.181.212:8080/ticket/ticketstate", {
       state: 1,
       tickets: selectedId,
     });

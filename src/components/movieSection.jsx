@@ -4,8 +4,6 @@ import MovieItem from "./movieItem";
 const MovieSection = ({
   movies,
   movie,
-  movielist,
-  selectScreen,
   getScreens,
   theater,
   date,

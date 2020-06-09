@@ -10,15 +10,13 @@ const LeftBtn1 = ({
   selectTeen,
   selectSenior,
   handleseatSelected,
-  seatSelectedIndex,
-  handleSeatArr,
   handleseatSelectedIndex,
   ticketTokens,
   changeTicketState,
 }) => {
   const handlePage = () => {
     let selectedId = selectedSeats.map((item) => item.ticketId);
-    axios.patch("http://127.0.0.1:8005/ticket/ticketstate", {
+    axios.patch("http://54.180.181.212:8080/ticket/ticketstate", {
       state: 1,
       tickets: selectedId,
     });

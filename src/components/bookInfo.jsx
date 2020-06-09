@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import RightBtn1 from "./rightBtn1";
 import RightBtn2 from "./rightBtn2";
 import RightBtn3 from "./rightBtn3";
@@ -15,7 +14,6 @@ const BookInfo = ({
   theater,
   timeData,
   date,
-  screeninfo,
   moveToBefore,
   moveToNext,
   currentStep,
@@ -30,8 +28,6 @@ const BookInfo = ({
   handleSeatArr,
   getSeatTable,
 }) => {
-  const [screen, setScreen] = useState("");
-  const [layer, setLayer] = useState("");
   const [time, setTime] = useState("");
   const [dateStr, setDateStr] = useState("");
   useEffect(() => {
@@ -40,6 +36,25 @@ const BookInfo = ({
 
   return (
     <div className="bookInfoContainer">
+      <LeftBtn1
+        setBookedToEmpty={setBookedToEmpty}
+        selectedSeats={selectedSeats}
+        moveToBefore={moveToBefore}
+        currentStep={currentStep}
+        selectAdult={selectAdult}
+        selectSenior={selectSenior}
+        selectTeen={selectTeen}
+        handleseatSelected={handleseatSelected}
+        handleseatSelectedIndex={handleseatSelectedIndex}
+        seatSelectedIndex={seatSelectedIndex}
+        handleSeatArr={handleSeatArr}
+        ticketTokens={ticketTokens}
+        changeTicketState={changeTicketState}
+      />
+      <LeftBtn2
+        moveToBefore={moveToBefore}
+        currentStep={currentStep}
+      ></LeftBtn2>
       <div className="bookInfo">
         <div className="mv Choice">
           <div className={"choicePh" + (movie !== "" ? " hide" : "")}>
@@ -138,25 +153,7 @@ const BookInfo = ({
             </span>
           </div>
         </div>
-        <LeftBtn1
-          setBookedToEmpty={setBookedToEmpty}
-          selectedSeats={selectedSeats}
-          moveToBefore={moveToBefore}
-          currentStep={currentStep}
-          selectAdult={selectAdult}
-          selectSenior={selectSenior}
-          selectTeen={selectTeen}
-          handleseatSelected={handleseatSelected}
-          handleseatSelectedIndex={handleseatSelectedIndex}
-          seatSelectedIndex={seatSelectedIndex}
-          handleSeatArr={handleSeatArr}
-          ticketTokens={ticketTokens}
-          changeTicketState={changeTicketState}
-        />
-        <LeftBtn2
-          moveToBefore={moveToBefore}
-          currentStep={currentStep}
-        ></LeftBtn2>
+
         <RightBtn1
           getSeatTable={getSeatTable}
           movie={movie}

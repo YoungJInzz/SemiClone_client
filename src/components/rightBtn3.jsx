@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaCheck } from "react-icons/fa";
 
 const RightBtn3 = ({ title, currentStep, step }) => {

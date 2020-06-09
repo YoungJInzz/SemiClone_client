@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Movieitems = ({
   movie,
@@ -9,10 +9,6 @@ const Movieitems = ({
   date,
   getInitScreens,
   group,
-  selectTheater,
-  selectDate,
-  selectRegion,
-  initShowTimes,
   initTotal,
 }) => {
   const clickmovie = (item) => {

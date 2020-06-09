@@ -10,16 +10,13 @@ const TheatherSection = ({
   theater,
   getScreens,
   group,
-  selectMovie,
-  initShowTimes,
   selectTheater,
-  selectDate,
   selectRegion,
 }) => {
   const [regionCinemas, setRegionCinemas] = useState([]);
 
   const ClickTheater = (item) => {
-    if (item.isAvailable == true) {
+    if (item.isAvailable === true) {
       selectTheater(item);
       getScreens({ movieId: movie.id, cinemaId: item.id, date, group });
     } else {

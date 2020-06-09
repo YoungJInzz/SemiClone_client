@@ -1,3 +1,6 @@
+language: node.js
+node_js:
+  - "node"
 sudo: required
 services:
   - docker
@@ -7,14 +10,16 @@ before_install:
 
 script:
   - docker run cinerium
+
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"
-  app: cinerium
+  app: "cinerium"
   env: "Cinerium-env"
   bucket_name: "elasticbeanstalk-ap-northeast-2-168618943806"
-  bucket_path: "cinerium"
-  on: branch:master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key:
-      secure: '$AWS_SECRET_KEY'
+  bucket-path: "cinerium"
+  on:
+    branch: YG4
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
