@@ -72,7 +72,7 @@ const Seatselect2Section = ({
   const refresh = () => {
     let selectedId = selectedSeats.map((item) => item.ticketId);
 
-    axios.patch("http://localhost:8080/ticket/ticketstate", {
+    axios.patch("http://54.180.181.212:8080/ticket/ticketstate", {
       state: 1,
       tickets: selectedId,
     });
