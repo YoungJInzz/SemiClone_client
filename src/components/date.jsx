@@ -75,6 +75,7 @@ const Dates = ({
   const [year, setYear] = useState();
   const [thisMonth, setThisMonth] = useState();
   const [nextMonth, setNextMonth] = useState();
+  const [beforeDates, setBeforeDates] = useState([]);
   const [thisDates, setThisDates] = useState([]);
   const [nextDates, setNextDates] = useState([]);
 
@@ -91,16 +92,21 @@ const Dates = ({
   };
 
   const getDateArr = () => {
+    let beforeDatesArr = [];
     let thisDatesArr = [];
     let nextDatesArr = [];
     for (let item of dates) {
+      if (Number(JSON.stringify(item.date).substring(4, 6)) === thisMonth - 1) {
+        beforeDatesArr.push(item);
+      }
       if (Number(JSON.stringify(item.date).substring(4, 6)) === thisMonth) {
         thisDatesArr.push(item);
       }
-      if (Number(JSON.stringify(item.date).substring(4, 6)) === nextMonth) {
+      if (Number(JSON.stringify(item.date).substring(4, 6)) === thisMonth + 1) {
         nextDatesArr.push(item);
       }
     }
+    setBeforeDates(beforeDatesArr);
     setThisDates(thisDatesArr);
     setNextDates(nextDatesArr);
   };
@@ -133,27 +139,60 @@ const Dates = ({
       <div className="dateSection">
         <div className="head">날짜</div>
         <div className="year">{year}</div>
+        <div className={"month" + (beforeDates.length === 0 ? "hide" : "")}>
+          {thisMonth - 1}
+        </div>
+        <div className={"dates" + (beforeDates.length === 0 ? "hide" : "")}>
+          {beforeDates.map((item) => (
+            <DateItem
+              getInitScreens={getInitScreens}
+              item={item}
+              date={date}
+              numToDay={numToDay}
+              handleDate={handleDate}
+              getScreens={getScreens}
+              movie={movie}
+              theater={theater}
+              group={group}
+              selectDate={selectDate}
+              initTotal={initTotal}
+            />
+          ))}
+        </div>
         <div className="month">{thisMonth}</div>
         <div className="dates">
           {thisDates.map((item) => (
             <DateItem
               getInitScreens={getInitScreens}
-              year={year}
-              month={thisMonth}
               item={item}
               date={date}
-              selectDate={selectDate}
               numToDay={numToDay}
               handleDate={handleDate}
-              handleDay={handleDay}
               getScreens={getScreens}
               movie={movie}
               theater={theater}
               group={group}
-              selectMovie={selectMovie}
-              initShowTimes={initShowTimes}
-              selectTheater={selectTheater}
-              selectRegion={selectRegion}
+              selectDate={selectDate}
+              initTotal={initTotal}
+            />
+          ))}
+        </div>
+        <div className={"month" + (nextDates.length === 0 ? " hide" : "")}>
+          {thisMonth + 1}
+        </div>
+        <div className={"dates" + (nextDates.length === 0 ? " hide" : "")}>
+          {nextDates.map((item) => (
+            <DateItem
+              getInitScreens={getInitScreens}
+              item={item}
+              date={date}
+              numToDay={numToDay}
+              handleDate={handleDate}
+              getScreens={getScreens}
+              movie={movie}
+              theater={theater}
+              group={group}
+              selectDate={selectDate}
               initTotal={initTotal}
             />
           ))}
