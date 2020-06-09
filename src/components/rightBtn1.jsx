@@ -22,12 +22,7 @@ const RightBtn1 = ({
         (currentStep !== step ? " hide" : "")
       }
       onClick={() => {
-        if (
-          movie !== "" &&
-          theater !== "" &&
-          date !== "" &&
-          timeData.screenId !== ""
-        ) {
+        if (movie !== "" && theater !== "" && date !== "" && timeData !== "") {
           moveToNext();
           getSeatTable(timeData.id);
         } else alert("영화,극장,날짜,시간선택을 완료해주세요");
