@@ -444,6 +444,7 @@ body {
   float: left;
   margin-right: 3px;
   border: 1px solid #a9a9a9;
+  overflow: auto;
 }
 
 .dateSection .head {
@@ -506,7 +507,7 @@ body {
 .dates {
   margin-right: 10px;
   overflow: auto;
-  height: 350px;
+  min-height: 50px;
 }
 
 /* date*/
