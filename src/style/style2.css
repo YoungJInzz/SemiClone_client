@@ -15,12 +15,23 @@ body {
   height: 45px;
 }
 
+.transShow {
+  max-height: 500px;
+  transition: max-height 0.2s ease-in;
+}
+.transHide {
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  background: #d5d5d5;
+}
 .show {
   display: block;
 }
 .hide {
   display: none;
 }
+
 .selected {
   background-color: #666;
   color: whitesmoke;

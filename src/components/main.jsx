@@ -76,11 +76,12 @@ const Main = () => {
               <BsCircleFill className="circleFillIcon" />
               영화(개발중)
             </li>
+
             <li className="nav-li" onClick={() => handleStep("booking")}>
               <BsCircleFill className="circleFillIcon" />
               예매
             </li>
-            <ul className={step === "booking" ? " show" : "hide"}>
+            <ul className={step === "booking" ? " transShow" : " transHide"}>
               <Link to="booking">
                 <li className="nav-child-li">
                   <BsCircle className="circleIcon" />
@@ -93,7 +94,20 @@ const Main = () => {
                   상영시간표
                 </li>
               </Link>
+              <li className="nav-child-li">
+                <BsCircle className="circleIcon" />
+                빠른예매
+              </li>
+              <li className="nav-child-li">
+                <BsCircle className="circleIcon" />
+                빠른예매
+              </li>
+              <li className="nav-child-li">
+                <BsCircle className="circleIcon" />
+                빠른예매
+              </li>
             </ul>
+
             <li className="nav-li">
               <BsCircleFill className="circleFillIcon" />
               극장(개발중)
