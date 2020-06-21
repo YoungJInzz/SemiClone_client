@@ -1,0 +1,173 @@
+@media screen and (min-width: 1415px) {
+    .bar-icon {
+      /* display: none; */
+    }
+}
+@media screen and (max-width: 1415px) {
+    .main-header > .logotag {
+      transition: all 0.2s linear;
+    }
+    .main-sidebar {
+        transition: all 0.2s linear;
+    }
+    .bar-icon {
+        transition: all 0.2s linear;
+        /* transform: translateX(-250px); */
+    }
+}
+/* .test{
+    float: left;
+} */
+.main-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    max-height: 50px;
+    width: 100%;
+    z-index: 2;
+}
+    .main-header > .logotag {
+        height: 50px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        float: left;
+        background-color: #ff9201;
+        transition: all 0.2s linear;
+        position: relative;
+        z-index: 10;
+    }
+        .main-header > .logotag .logo {
+            position: relative;
+            width: 160px;
+            display: flex;
+        }
+        .main-header > .logotag .logo > img{
+            width: 160px;
+        }
+    .navbar {
+        background-color: #ffb34f;
+        height: 50px;
+    }
+        .logotag .bar-icon {
+            position: relative;
+            left: 16px;
+            top: 14px;
+            margin-right: 26px;
+            color: white;
+            font-size: 20px;
+            transition: all 0.2s linear;
+            width: 40px;
+        }
+    .navbar > .bar-icon{
+        position: relative;
+        left: 16px;
+        top: 14px;
+        margin-right: 26px;
+        color: white;
+        font-size: 20px;
+        transition: all 0.2s linear;
+        width: 40px;
+        transform: translateX(-250px);
+    }
+
+    .navbar > .logo{
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 67px;
+        width: 160px;
+        display: flex;
+    }
+    .navbar > .logo > img{
+        width: 160px;
+    }
+
+
+.main-sidebar {
+    position: fixed;
+    min-height: 100%;
+    width: 250px;
+    background-color: #e8e8e1;
+    z-index: 2;
+    top: 50px;
+    transition: all 0.2s linear;
+}
+    .login {
+        margin: 18px 0px 24px 0px;
+        position: relative;
+    }
+        .loginBtn {
+            cursor: pointer;
+            color: #858585;
+            border: 1px solid #b4b3b3;
+            background-color: #ffffff;
+            border-radius: 7px;
+            position: relative;
+            margin: 0px 8px 0px 0px;
+            font-size: 30px;
+            float: right;
+            width: 60px;
+            height: 85px;
+        }
+        .loginBtn:hover {
+            color: black;
+        }
+            .powerIcon {
+                position: relative;
+                margin: 25px 0px 0px 14px;
+            }
+        .loginForm {
+            overflow: hidden;
+        }
+            .loginInput {
+                position: relative;
+                border-radius: 5px;
+                border: 1px solid black;
+                margin: 2px;
+                padding: 10px;
+                width: 150px;
+                font-size: 14px;
+            }
+    .menuTitle {
+        color: #545454;
+        padding-left: 24px;
+        font-size: 24px;
+    }
+    .sidebar {
+        position: relative;
+        clear: both;
+    }
+        .nav-li {
+            padding-top: 17px;
+            cursor: pointer;
+            height: 40px;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+        .nav-li:hover {
+            background-color: #dadace;
+        }
+            .circleFillIcon {
+                display: inline-block;
+                margin-right: 10px;
+                position: relative;
+                font-size: 12px;
+                top: 2px;
+            }
+        .nav-child-li {
+            padding-top: 10px;
+            cursor: pointer;
+            height: 30px;
+            padding-left: 20px;
+        }
+        .nav-child-li:hover {
+            font-weight: 600;
+        }
+            .circleIcon {
+                display: inline-block;
+                margin-right: 10px;
+                position: relative;
+                font-size: 15px;
+            }

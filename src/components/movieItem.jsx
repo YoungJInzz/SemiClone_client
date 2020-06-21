@@ -1,4 +1,8 @@
 import React from "react";
+import twe from "../resources/12.png";
+import fif from "../resources/15.png";
+import nin from "../resources/19.png";
+import all from "../resources/all.png";
 
 const Movieitems = ({
   movie,
@@ -55,7 +59,17 @@ const Movieitems = ({
               : "nin")
           }
         >
-          {items.movieRating}
+          {/* {items.movieRating} */}
+          <img class="img" 
+            src={
+              (items.movieRating === "전체"
+                ? all
+                : items.movieRating === "12"
+                ? twe
+                : items.movieRating === "15"
+                ? fif
+                : nin)
+            } alt=""></img>
         </span>
         <span className="title">{items.movieTitle}</span>
       </div>
