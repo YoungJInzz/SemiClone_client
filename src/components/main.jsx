@@ -18,14 +18,14 @@ const Main = () => {
 
   useEffect(() => {
     function watchResize() {
-      window.addEventListener("resize", setPayResultPosition);
+      window.addEventListener("resize", toggleSidebar);
     }
     watchResize();
     return () => {
-      window.removeEventListener("resize", setPayResultPosition);
+      window.removeEventListener("resize", toggleSidebar);
     };
   });
-  const setPayResultPosition = () => {
+  const toggleSidebar = () => {
     if (window.innerWidth < 1415) {
       ref1.current.style.transform = "translateX(-100%)";
       ref2.current.style.transform = "translateX(-100%)";
@@ -94,18 +94,6 @@ const Main = () => {
                   상영시간표
                 </li>
               </Link>
-              <li className="nav-child-li">
-                <BsCircle className="circleIcon" />
-                빠른예매
-              </li>
-              <li className="nav-child-li">
-                <BsCircle className="circleIcon" />
-                빠른예매
-              </li>
-              <li className="nav-child-li">
-                <BsCircle className="circleIcon" />
-                빠른예매
-              </li>
             </ul>
 
             <li className="nav-li">
