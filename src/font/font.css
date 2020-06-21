@@ -1,0 +1,8 @@
+@font-face{
+    font-family: 'aCinemL';
+    src: url(a시네마L.ttf);
+}
+
+body{
+    font-family: aCinemL;
+}

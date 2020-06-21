@@ -47,12 +47,19 @@ const Main = () => {
   };
   return (
     <div>
-      <header className="main-header ">
-        <a className="logotag" href="http://www.cinerium.net/" ref={ref1}>
-          <img className="logo" src={Logo} alt=""></img>
-        </a>
+      <header className="main-header">
+        
+        <div className="logotag" href="127.0.0.1:8005" ref={ref1}>
+          <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
+          <a className="logo" href="127.0.0.1:8005">
+            <img  src={Logo} alt=""></img>
+          </a>
+        </div>
         <nav className="navbar">
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
+          <a className="logo" href="127.0.0.1:8005">
+            <img src={Logo} alt=""></img>
+          </a>
         </nav>
       </header>
       <aside className="main-sidebar" ref={ref2}>
@@ -61,15 +68,14 @@ const Main = () => {
             <IoMdPower className="powerIcon" />
           </div>
           <div className="loginForm">
-            <input className="loginInput" type="text" placeholder="id"></input>
-            <input
-              className="loginInput"
+            <input className="loginInput" type="text" placeholder="아이디"></input>
+            <input className="loginInput"
               type="password"
-              placeholder="password"
+              placeholder="비밀번호"
             ></input>
           </div>
         </section>
-        <div className="menuTitle"> Menu</div>
+        <div className="menuTitle">Menu</div>
         <section className="sidebar">
           <ul>
             <li className="nav-li">
