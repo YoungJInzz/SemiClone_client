@@ -58,7 +58,7 @@ const BookInfo = ({
       <div className="bookInfo">
         <div className="mv Choice">
           <div className={"choicePh" + (movie !== "" ? " hide" : "")}>
-            영화선택
+            영화선택     
           </div>
           <div className="movieSelected">{movie.movieTitle}</div>
         </div>

@@ -1,0 +1,242 @@
+.seat-header {
+    position: relative;
+    height: 35px;
+    width: 1100px;
+    background-color: #00001a;
+    margin: 0 auto;
+    text-align: center;
+    color: #e5e3d4;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.refresh {
+    cursor: pointer;
+    color: #e5e3d4;
+    float: right;
+    width: 100px;
+}
+.refresh-title {
+    position: relative;
+    margin-left: 10px;
+    float: left;
+    font-size: 13px;
+}
+.refresh-icon {
+    position: absolute;
+    margin-top: 6px;
+    position: relative;
+    font-size: 20px;
+    color: #e5e3d4;
+}
+.seat-info {
+    height: 120px;
+    background-color: #f9efdc;
+    position: relative;
+    box-shadow: 0px 2px #bdbdbd;
+}
+.seat-row {
+    height: 30px;
+    margin-bottom: 5px;
+    clear: both;
+}
+.seat-person {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 90px;
+    width: 470px;
+    border-right: 1px solid #cccccc;
+}
+.seat-row-title {
+    color: #706e66;
+    line-height: 25px;
+    font-size: 13px;
+    float: left;
+}
+.adult-person {
+    position: absolute;
+    margin-left: 50px;
+    float: left;
+}
+.adult-person > li {
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    float: left;
+}
+.person-btn {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    border: 1px solid #cdcac5;
+}
+.select2 {
+    background-color: #4a3913;
+    color: #e5e3d4;
+}
+.seat-time {
+    position: absolute;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-left: 530px;
+    padding-right: 20px;
+    height: 90px;
+    width: 470px;
+}
+.seat-time-row {
+    width: 550px;
+    height: 30px;
+}
+.seat-time-content {
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    font-size: 13px;
+}
+.thea {
+    border-right: 1px solid #cccccc;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.scr {
+    border-right: 1px solid #cccccc;
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.seat-time-time {
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    width: 135px;
+}
+.seat-main {
+    position: relative;
+}
+.seat-screen {
+    position: relative;
+    float: left;
+    margin-left: 80px;
+    width: 800px;
+    height: 400px;
+    padding-top: 30px;
+}
+.screen-img {
+    position: relative;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3px,
+      #ccc 8px,
+      #ccc 5px
+    );
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 25px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.opening-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    margin-top: 120px;
+    margin-left: 165px;
+    margin-right: auto;
+}
+.legend {
+    position: relative;
+    margin-left: 70px;
+    float: left;
+  
+    width: 100px;
+    height: 400px;
+}
+.legend-content {
+    position: relative;
+    margin-top: 90px;
+}
+.legend-row {
+    height: 35px;
+}
+.seat-icon-title {
+    color: #706e66;
+    font-size: 14px;
+    float: left;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+  
+.seat-icon-selected {
+    position: relative;
+    float: left;
+    margin-top: 5px;
+    color: #c0392b;
+}
+.seat-icon-selectable {
+    position: relative;
+    float: left;
+    margin-top: 5px;
+    color: #566573;
+}
+.seat-icon-booked {
+    opacity: 0.6;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+    color: #808b96;
+}
+.opening-row {
+    position: relative;
+    margin-left: 150px;
+    position: relative;
+    clear: both;
+}
+.opening-row-name {
+    margin-right: 10px;
+    width: 15px;
+    position: relative;
+    float: left;
+}
+.opening-seat {
+    position: relative;
+  
+    margin-left: 20px;
+}
+.opening-item {
+    border-bottom: 3px solid white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 2px;
+    width: 18px;
+    height: 18px;
+    color: white;
+    background-color: #566573;
+    position: relative;
+    float: left;
+}
+.opening-item:hover {
+    background-color: #c0392b;
+}
+.seatSelected {
+    background-color: #c0392b;
+    pointer-events: none;
+}
+
