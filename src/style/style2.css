@@ -1,5 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400);
 
+@media screen and (max-width: 1001px) {
+  .step1{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 137px;
+  }
+}
+@media screen and (min-width: 1002px) {
+  .step1{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -34,6 +48,7 @@ body {
 
 .selected {
   background-color: #666;
+  font-weight: bold;
   color: whitesmoke;
 }
 .notClick {
@@ -57,11 +72,12 @@ body {
   z-index: 1;
 }
 .regionSelected {
-  background-color: #abb2b9;
-  color: whitesmoke;
+  background-color: #666;
+  color: white;
 }
 .red {
-  background-color: #c0392b;
+  /* background-color: #c0392b; */
+  background: #ED440A;
 }
 
 .red-font {
@@ -73,242 +89,37 @@ body {
 }
 
 .gray {
-  background-color: #808b96;
+  /* background-color: rgb(255, 89, 70); */
+  background: #ffb34f;
 }
 .bookingContainer {
-  position: relative;
   margin-left: 250px;
   max-width: 3000px;
   padding-top: 90px;
-  background-color: white;
+  /* background-color: white; */
 }
 .booking-container {
   position: relative;
-  margin-left: 5px;
-  width: 1100px;
+  margin: auto;
+  /* --margin-left: 5px; */
+  /* width: 1100px; */
+  width: 100%;
   z-index: 1;
 }
 
 .step1 {
-  position: relative;
+  /* position: relative;
   background-color: #ebedef;
-  height: 495px;
+  height: 495px; */
+  padding: 0px 24px;
 }
-/*header*/
-.main-header {
-  position: relative;
-  max-height: 50px;
-}
-.logotag {
-  position: relative;
-  height: 50px;
-  width: 250px;
-  display: block;
-  float: left;
-  background-color: #ff9201;
-  transition: all 0.2s linear;
-}
-@media screen and (min-width: 1415px) {
-  .bar-icon {
-    display: none;
-  }
-  .cinemasContainer {
-    margin-left: 270px;
-  }
-}
+
 @media screen and (max-width: 1415px) {
-  .cinemasContainer {
-    margin-left: 20px;
-  }
-  .bar-icon {
-    transition: all 0.2s linear;
-    transform: translateX(-240px);
-  }
-  .logotag {
-    transition: all 0.2s linear;
-  }
   .bookingContainer {
     margin-left: 0px;
   }
-  .main-sidebar {
-    transition: all 0.2s linear;
-  }
-}
-.logo {
-  position: relative;
-  margin-left: 10px;
-  height: 50px;
-  width: 220px;
-}
-.navbar {
-  background-color: #ffb34f;
-  width: 100%;
-  height: 50px;
-}
-.bar-icon {
-  cursor: pointer;
-  top: 10px;
-  font-size: 30px;
-  position: relative;
-  float: left;
-  transition: all 0.2s linear;
-}
-.main-sidebar {
-  position: absolute;
-  min-height: 100%;
-  width: 250px;
-  background-color: #e8e8e1;
-  z-index: 2;
-  transition: all 0.2s linear;
-}
-.login {
-  margin: 15px 0px 20px 0px;
-  position: relative;
-}
-.loginInput {
-  position: relative;
-  border-radius: 5px;
-  border: 1px solid black;
-  margin: 2px;
-  padding: 10px;
-  width: 150px;
-  font-size: 17px;
-}
-.loginForm {
-  overflow: hidden;
 }
 
-.powerIcon {
-  position: relative;
-  margin: 25px 0px 0px 14px;
-}
-.loginBtn {
-  cursor: pointer;
-  color: #858585;
-  border: 1px solid #b4b3b3;
-  background-color: #ffffff;
-  border-radius: 7px;
-  position: relative;
-  margin: 3px 10px 0px 0px;
-  font-size: 30px;
-  float: right;
-  width: 60px;
-  height: 85px;
-}
-.menuTitle {
-  color: #545454;
-  margin-left: 100px;
-}
-.sidebar {
-  position: relative;
-  clear: both;
-}
-.nav-li {
-  padding-top: 17px;
-  cursor: pointer;
-  height: 40px;
-  padding-left: 10px;
-}
-.nav-li:hover {
-  background-color: #dadace;
-}
-.nav-child-li {
-  padding-top: 10px;
-  cursor: pointer;
-  height: 30px;
-  padding-left: 20px;
-}
-.nav-child-li:hover {
-  font-weight: 600;
-}
-.circleFillIcon {
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  font-size: 15px;
-}
-.circleIcon {
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  font-size: 15px;
-}
-/*header*/
-
-/*movie*/
-
-.movie-section {
-  background-color: #fffaf0;
-  height: 495px;
-  position: relative;
-  float: left;
-  width: 270px;
-  margin-right: 3px;
-  border: 1px solid #a9a9a9;
-}
-
-.movie-section .head {
-  font-size: 16px;
-  font-weight: 600;
-  height: 30px;
-  text-align: center;
-  color: #e5e3d4;
-  background-color: #2c3e50;
-}
-
-.movie-section .select {
-  margin-left: 15px;
-  margin-right: 10px;
-  margin-top: 15px;
-}
-
-.movie-section .menu {
-  height: 50px;
-}
-
-.movie-section .btn-1 {
-  font-size: 15px;
-  height: 20px;
-  border: 1px solid #666;
-  border-bottom: 0;
-  display: inline-block;
-  text-align: center;
-  width: 110px;
-}
-
-.movie-section .btn-2 {
-  font-size: 15px;
-  height: 20px;
-  border: 1px solid #666;
-  display: inline-block;
-  text-align: center;
-  width: 110px;
-}
-
-.movieItem {
-  height: 30px;
-  width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.movieItem:hover {
-  cursor: pointer;
-}
-
-.movie-section .select .list {
-  height: 5px;
-  overflow: auto;
-  height: 350px;
-}
-
-.age {
-  font-size: 14px;
-  margin-right: 8px;
-  background-color: darkorange;
-  color: white;
-  border-radius: 5px;
-}
 .age2 {
   display: inline-block;
   text-align: center;
@@ -321,246 +132,6 @@ body {
   color: white;
   border-radius: 10px;
 }
-.all {
-  font-size: 12px;
-  background-color: #77b300;
-}
-
-.twe {
-  background-color: darkorange;
-}
-
-.fif {
-  background-color: #00bfff;
-}
-
-.nin {
-  background-color: #ff0000;
-}
-
-.movieItem .title {
-  width: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  overflow: hidden;
-}
-
-/*movie*/
-
-/*theater*/
-.theater-section {
-  background-color: #fffaf0;
-  height: 495px;
-  width: 280px;
-  position: relative;
-  float: left;
-  margin-right: 3px;
-  border: 1px solid #a9a9a9;
-}
-
-.theater-section .head {
-  font-size: 16px;
-  font-weight: 600;
-  height: 30px;
-  text-align: center;
-  color: #e5e3d4;
-  background-color: #2c3e50;
-}
-
-.theater-section .select {
-  margin-left: 20px;
-  margin-right: 15px;
-  margin-top: 15px;
-}
-
-.theater-section .menu {
-  height: 50px;
-}
-
-.theater-section .btn-1 {
-  font-size: 15px;
-  height: 20px;
-  border: 1px solid #666;
-  border-bottom: 0;
-  display: inline-block;
-  text-align: center;
-  width: 110px;
-}
-
-.theater-section .btn-2 {
-  font-size: 15px;
-  height: 20px;
-  border: 1px solid #666;
-  display: inline-block;
-  text-align: center;
-  width: 110px;
-}
-
-.regionList {
-  margin-left: 5px;
-  position: relative;
-  float: left;
-  border-right: 1px solid #dcdcdc;
-  width: 110px;
-  height: 380px;
-}
-
-.theater-section .regionItem {
-  width: 110px;
-  height: 25px;
-  font-size: 14px;
-  margin-bottom: 2px;
-}
-
-.regionItem:hover {
-  cursor: pointer;
-}
-
-.regiontheater {
-  overflow: auto;
-  height: 350px;
-}
-
-.theaterItem {
-  width: 120px;
-  font-size: 14px;
-  height: 25px;
-  white-space: pre;
-  overflow: hidden;
-}
-
-.theaterItem:hover {
-  cursor: pointer;
-}
-
-/*theater*/
-
-/*date*/
-.dateSection {
-  background-color: #fffaf0;
-  height: 495px;
-  width: 110px;
-  position: relative;
-  float: left;
-  margin-right: 3px;
-  border: 1px solid #a9a9a9;
-  overflow: auto;
-}
-
-.dateSection .head {
-  font-size: 16px;
-  font-weight: 600;
-  height: 30px;
-  text-align: center;
-  color: #e5e3d4;
-  background-color: #2c3e50;
-}
-
-.year {
-  font-size: 12px;
-  font-family: Verdana;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.month {
-  margin-top: 3px;
-  font-size: 30px;
-  font-family: Verdana;
-  font-weight: bold;
-  text-align: center;
-  line-height: 30px;
-}
-
-.dateItem {
-  margin-left: 20px;
-  width: 60px;
-  position: relative;
-  line-height: 30px;
-}
-
-.dateItem:hover {
-  cursor: pointer;
-}
-
-.day {
-  font-size: 14px;
-}
-
-.sun {
-  margin-top: 3px;
-  color: #a93226;
-}
-
-.sat {
-  color: #3333ff;
-}
-
-.date {
-  margin-left: 15px;
-  font-size: 13px;
-  font-family: Verdana;
-  font-weight: bold;
-}
-
-.dates {
-  margin-right: 10px;
-  overflow: auto;
-  min-height: 50px;
-}
-
-/* date*/
-
-/*time*/
-.timeSection {
-  background-color: #fffaf0;
-  height: 495px;
-  width: 420px;
-  position: relative;
-  float: left;
-  margin-right: 3px;
-  border: 1px solid #a9a9a9;
-}
-
-.timeSection .head {
-  font-size: 16px;
-  font-weight: 600;
-  height: 30px;
-  text-align: center;
-  color: #e5e3d4;
-  background-color: #2c3e50;
-}
-.timeInfo {
-  height: 350px;
-  overflow: auto;
-}
-.placeholder {
-  margin-top: 180px;
-  text-align: center;
-  font-size: 15px;
-  color: #666;
-}
-
-.time-option {
-  font-size: 15px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-.morning {
-  margin-right: 15px;
-}
-
-.sun {
-  color: #ff0000;
-}
-
-.moon {
-  color: #0000ff;
-}
-
 .timeItem {
   overflow: hidden;
   padding-top: 7px;
@@ -594,12 +165,6 @@ body {
   color: #566573;
 }
 
-.seatSelect {
-  cursor: pointer;
-  float: left;
-  margin-bottom: 20px;
-}
-
 .timeItem .time {
   position: relative;
   float: left;
@@ -611,15 +176,7 @@ body {
   margin-right: 5px;
   font-size: 14px;
   font-weight: bold;
-}
-
-.emptySeat {
-  position: relative;
-  float: left;
-  width: 70px;
-  margin-top: 6px;
-  font-size: 12px;
-  color: #519227;
+  line-height: 20px;
 }
 
 .sellout {
@@ -629,128 +186,6 @@ body {
 .sellout2 {
   text-decoration: line-through;
   opacity: 0.5;
-}
-
-/*time*/
-
-/*bookInfo*/
-.bookInfoContainer {
-  position: relative;
-  clear: both;
-  margin-top: 2px;
-  background-color: #17202a;
-  height: 140px;
-}
-.bookInfo {
-  margin-left: 100px;
-}
-.Choice {
-  position: absolute;
-  line-height: 90px;
-  padding-right: 50px;
-  text-align: center;
-  margin-top: 20px;
-  height: 90px;
-  width: 160px;
-  font-size: 25px;
-  border-right: 1px solid #cccccc;
-}
-
-.mv {
-  margin-left: 0px;
-}
-
-.th {
-  margin-left: 220px;
-  color: #ededed;
-}
-
-.se {
-  margin-left: 440px;
-  color: #ededed;
-}
-
-.pay {
-  margin-left: 660px;
-}
-
-.choicePh {
-  color: #cccccc;
-}
-
-.movieSelected {
-  font-size: 15px;
-  color: #ededed;
-  width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.theaterInfo {
-  position: relative;
-  margin-top: 5px;
-}
-
-.row {
-  line-height: 20px;
-  height: 22px;
-  font-size: 15px;
-  text-align: left;
-  color: #ededed;
-}
-
-.content {
-  position: absolute;
-  float: left;
-  margin-left: 10px;
-  line-height: 20px;
-  font-size: 15px;
-  color: #ededed;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 140px;
-}
-.content-time {
-  margin-left: 85px;
-}
-
-.content-layer {
-  margin-left: 40px;
-}
-
-.content-seat {
-  position: relative;
-  width: 60px;
-  float: left;
-  text-align: left;
-}
-
-.price {
-  float: right;
-  text-align: right;
-  width: 70px;
-  font-weight: bold;
-}
-
-.seatSelectedContainer {
-  margin-left: 10px;
-  position: relative;
-  float: left;
-}
-
-.eachSeat {
-  position: relative;
-  float: left;
-}
-
-.rightBtn {
-  cursor: pointer;
-  position: absolute;
-  margin-left: 950px;
-  margin-top: 15px;
-  border-radius: 20px;
-  width: 100px;
-  height: 100px;
 }
 .rightBtn3 {
   cursor: pointer;
@@ -806,7 +241,6 @@ body {
   font-weight: bold;
   color: #fbfcfc;
 }
-/*bookInfo*/
 
 .step2 {
   background-color: #fffaf0;
@@ -815,451 +249,9 @@ body {
   margin: 0 auto;
   border: 1px solid #ebedef;
 }
-
-.seat-header {
-  position: relative;
-  height: 35px;
-  width: 1100px;
-  background-color: #00001a;
-  margin: 0 auto;
-  text-align: center;
-  color: #e5e3d4;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 32px;
-}
-
-.refresh {
-  cursor: pointer;
-  color: #e5e3d4;
-  float: right;
-  width: 100px;
-}
-.refresh-title {
-  position: relative;
-  margin-left: 10px;
-  float: left;
-  font-size: 13px;
-}
-
-.refresh-icon {
-  position: absolute;
-  margin-top: 6px;
-  position: relative;
-  font-size: 20px;
-  color: #e5e3d4;
-}
-
-.seat-info {
-  height: 120px;
-  background-color: #f9efdc;
-  position: relative;
-  box-shadow: 0px 2px #bdbdbd;
-}
-.seat-row {
-  height: 30px;
-  margin-bottom: 5px;
-  clear: both;
-}
-
-.seat-person {
-  position: absolute;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 90px;
-  width: 470px;
-  border-right: 1px solid #cccccc;
-}
-
-.seat-row-title {
-  color: #706e66;
-  line-height: 25px;
-  font-size: 13px;
-  float: left;
-}
-.adult-person {
-  position: absolute;
-  margin-left: 50px;
-  float: left;
-}
-
-.adult-person > li {
-  width: 23px;
-  height: 23px;
-  margin-left: 10px;
-  float: left;
-}
-
-.person-btn {
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
-  float: left;
-  font-size: 13px;
-  font-weight: bold;
-  width: 23px;
-  height: 23px;
-  background-color: transparent;
-  border: 1px solid #cdcac5;
-}
-
-.select2 {
-  background-color: #4a3913;
-  color: #e5e3d4;
-}
-
-.seat-time {
-  position: absolute;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  padding-left: 530px;
-  padding-right: 20px;
-  height: 90px;
-  width: 470px;
-}
-.seat-time-row {
-  width: 550px;
-  height: 30px;
-}
-
-.seat-time-content {
-  position: relative;
-  float: left;
-  padding-left: 10px;
-  font-size: 13px;
-}
-
-.thea {
-  border-right: 1px solid #cccccc;
-  width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.scr {
-  border-right: 1px solid #cccccc;
-  width: 130px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.seat-time-time {
-  position: relative;
-  float: left;
-  padding-left: 10px;
-  font-size: 22px;
-  font-weight: bold;
-  width: 135px;
-}
-.seat-main {
-  position: relative;
-}
-
-.seat-screen {
-  position: relative;
-  float: left;
-  margin-left: 80px;
-  width: 800px;
-  height: 400px;
-  padding-top: 30px;
-}
-.screen-img {
-  position: relative;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 3px,
-    #ccc 8px,
-    #ccc 5px
-  );
-  margin-left: auto;
-  margin-right: auto;
-  width: 700px;
-  height: 25px;
-  line-height: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.legend {
-  position: relative;
-  margin-left: 70px;
-  float: left;
-
-  width: 100px;
-  height: 400px;
-}
-.legend-content {
-  position: relative;
-  margin-top: 90px;
-}
-
-.legend-row {
-  height: 35px;
-}
-
-.seat-icon-title {
-  color: #706e66;
-  font-size: 14px;
-  float: left;
-  margin-top: 1px;
-  margin-left: 10px;
-}
-
-.seat-icon-selected {
-  position: relative;
-  float: left;
-  margin-top: 5px;
-  color: #c0392b;
-}
-.seat-icon-selectable {
-  position: relative;
-  float: left;
-  margin-top: 5px;
-  color: #566573;
-}
-
-.seat-icon-booked {
-  opacity: 0.6;
-  position: relative;
-  float: left;
-  margin-top: 5px;
-  color: #808b96;
-}
-
-.opening-container {
-  position: relative;
-  width: 600px;
-  height: 400px;
-  position: relative;
-  margin-top: 120px;
-  margin-left: 165px;
-  margin-right: auto;
-}
-
-.opening-row {
-  position: relative;
-  margin-left: 150px;
-  position: relative;
-  clear: both;
-}
-
-.opening-row-name {
-  margin-right: 10px;
-  width: 15px;
-  position: relative;
-  float: left;
-}
-.opening-seat {
-  position: relative;
-
-  margin-left: 20px;
-}
-
-.opening-item {
-  border-bottom: 3px solid white;
-  cursor: pointer;
-  text-align: center;
-  font-size: 15px;
-  margin-right: 2px;
-  width: 18px;
-  height: 18px;
-  color: white;
-  background-color: #566573;
-  position: relative;
-  float: left;
-}
-
-.opening-item:hover {
-  background-color: #c0392b;
-}
-
 .notAvail {
   background-color: #abb2b9;
   pointer-events: none;
-}
-
-.seatSelected {
-  background-color: #c0392b;
-  pointer-events: none;
-}
-
-.pay-step {
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
-.pay-container {
-  position: relative;
-  float: left;
-  background-color: #fffaf0;
-  min-height: 630px;
-  width: 1000px;
-  margin: 0 auto;
-  border: 1px solid #ebedef;
-}
-
-.pay-method {
-  position: relative;
-  float: left;
-}
-.pay-titlebar {
-  width: 700px;
-  height: 35px;
-  line-height: 30px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #e0e0e0;
-  background-color: #333333;
-}
-
-.pay-titlebar > span {
-  margin-left: 12px;
-}
-
-.pay-titlebar > .again {
-  cursor: pointer;
-  font-size: 14px;
-  margin-left: 540px;
-}
-
-.refresh-icon2 {
-  position: absolute;
-  margin-top: 5px;
-  margin-left: 2px;
-  font-size: 20px;
-}
-
-.pay-header {
-  cursor: pointer;
-  width: 700px;
-  height: 40px;
-  line-height: 35px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  background-color: #dfded6;
-}
-
-.pay-header > span {
-  margin-left: 12px;
-}
-
-.down-icon {
-  position: relative;
-  float: right;
-  margin-top: 8px;
-  margin-right: 5px;
-  font-size: 23px;
-}
-.pay-body {
-  width: 697px;
-  height: 300px;
-  border: 2px solid #e8e7e1;
-}
-.select-discount {
-  position: relative;
-  float: left;
-  width: 180px;
-  height: 300px;
-  border-right: 2px solid #e8e7e1;
-}
-.discount-item {
-  padding: 3px;
-  cursor: pointer;
-  border-bottom: 2px solid #e8e7e1;
-  height: 25px;
-  color: 333333;
-  line-height: 27px;
-  font-size: 12px;
-}
-
-.couponSelected {
-  background-color: #fdfdf8;
-  border: 3px solid #333333;
-}
-
-.right-icon {
-  position: relative;
-  margin-top: 5px;
-  float: right;
-  color: #e8e7e1;
-}
-.select-form {
-  position: relative;
-  float: left;
-}
-.discount-list-header {
-  position: relative;
-  border-bottom: 2px solid #e8e7e1;
-  padding-bottom: 5px;
-  font-size: 11px;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.discount-list-header > .col1 {
-  margin-left: 5px;
-  display: inline-block;
-  width: 300px;
-}
-.discount-list-header > .col2 {
-  display: inline-block;
-  width: 150px;
-}
-
-.discount-list-body {
-  position: relative;
-  margin-left: 20px;
-  font-size: 15px;
-}
-.coupone-item {
-  position: relative;
-}
-
-.coupone-item > .col1 {
-  margin-right: 205px;
-}
-.result-form {
-  position: relative;
-  margin-left: 280px;
-  margin-top: 150px;
-}
-.coupon-applyButton {
-  cursor: pointer;
-  color: white;
-  border: 1px solid #bd8f62;
-  border-radius: 5px;
-  background-color: #bd8f62;
-}
-
-.NoCoupon {
-  margin-top: 100px;
-  margin-left: 120px;
-}
-
-.giftCard {
-  margin-top: 30px;
-  font-size: 14px;
-}
-.giftCard > .col1 {
-  margin-left: 20px;
-  margin-right: 10px;
-}
-.giftCard > .col2 {
-  margin-right: 10px;
-  color: #b30404;
-  font-weight: bold;
-}
-.giftCard > .col3 {
-  margin-right: 10px;
-}
-.giftCard > .col4 {
-  margin-left: 5px;
-}
-.giftCard > .col5 {
-  margin-left: 40px;
 }
 .pointApplyButton {
   cursor: pointer;
@@ -1268,165 +260,18 @@ body {
   border-radius: 8px;
   background-color: #bd8f62;
 }
-.pay-titlebar > .col1 {
-  font-size: 15px;
-}
-.pay-body2 {
-  width: 697px;
-  height: 180px;
-  border: 2px solid #e8e7e1;
-}
-.pay-way {
-  height: 35px;
-  border-bottom: 2px solid #e8e7e1;
-}
 .label {
   line-height: 33px;
   font-size: 16px;
   font-weight: bold;
   margin-right: 50px;
 }
-
-.payresult {
-  padding-top: 20px;
-  margin-left: 40px;
-  height: 380px;
-  width: 220px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px #888888;
-  float: left;
-  -webkit-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-}
-.col10 {
-  font-size: 25px;
-  font-weight: bold;
-}
-.col11 {
-  margin-left: 5px;
-  margin-right: 10px;
-}
-.priceToPayContainer {
-  margin-left: 10px;
-  margin-bottom: 50px;
-  border: 2px solid #333333;
-  width: 200px;
-  height: 80px;
-  border-radius: 5px;
-}
-.priceToPayHead {
-  color: #333333;
-  height: 50%;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 40px;
-  text-align: center;
-}
-.priceToPayBody {
-  height: 50%;
-  text-align: right;
-  line-height: 40px;
-  background-color: #333333;
-  color: #fdf8f8;
-}
-
 .priceDiscountedContainer {
   margin-left: 10px;
   border: 2px solid #333333;
   width: 200px;
   height: 80px;
   border-radius: 5px;
-}
-.priceToPayHead {
-  color: #333333;
-  height: 50%;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 40px;
-  text-align: center;
-}
-.priceToPayBody {
-  height: 50%;
-  text-align: right;
-  line-height: 40px;
-  background-color: #333333;
-  color: #fdf8f8;
-}
-/*selectbycinema*/
-.cinemasContainer {
-  margin-top: 20px;
-  position: relative;
-  width: 1100px;
-}
-.cinemas {
-  position: relative;
-  top: 1px;
-  background-image: url(../resources/background.svg);
-  height: 440px;
-  width: 1050px;
-}
-.selectMenu {
-  color: white;
-  font-weight: bold;
-  position: relative;
-  margin-left: 330px;
-  height: 45px;
-  width: 400px;
-  background-image: url(../resources/ribbon.svg);
-}
-
-.selectMenu > .col1 > .icon {
-  position: relative;
-  font-size: 24px;
-  top: 5px;
-}
-
-.selectMenu > .col1 {
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  height: 35px;
-  width: 160px;
-  border-right: 1px solid white;
-  padding-right: 20px;
-  position: relative;
-  margin-left: 20px;
-  top: 4px;
-  font-size: 15px;
-}
-.selectMenu > .col2 {
-  cursor: pointer;
-  line-height: 35px;
-  display: inline-block;
-  height: 35px;
-  width: 155px;
-  padding-left: 15px;
-  position: relative;
-  margin-left: 10px;
-  top: 4px;
-  font-size: 15px;
-}
-
-.cinemas > .regionList2 {
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
-  margin-left: 60px;
-  margin-top: 20px;
-  width: 940px;
-  height: 45px;
-}
-.cinemas > .regionList2 > .col {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  width: 55px;
-  height: 45px;
-  font-size: 16px;
-  line-height: 43px;
-  font-weight: 400;
-  margin-left: 14px;
-  color: #e8e8e8;
 }
 .region-selected {
   cursor: pointer;
@@ -1441,160 +286,10 @@ body {
   color: white;
   font-weight: bold;
 }
-
-.cinemaList {
-  position: relative;
-  width: 930px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-.cinemaList > .col {
-  cursor: pointer;
-  display: inline-block;
-  padding-right: 20px;
-  border-right: 1px solid white;
-  margin-left: 20px;
-  font-size: 15px;
-  margin-bottom: 35px;
-  position: relative;
-  color: #e8e8e8;
-}
-.theater-selected {
-  cursor: pointer;
-  display: inline-block;
-  padding-right: 20px;
-  border-right: 1px solid white;
-  margin-left: 20px;
-  font-size: 17px;
-  font-weight: bold;
-  margin-bottom: 35px;
-  position: relative;
-  color: white;
-}
-.timeData-container {
-  margin-top: 20px;
-  width: 1050px;
-}
-.timeData-container > .cinemaName {
-  height: 40px;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.datesList {
-  position: relative;
-  margin-top: 20px;
-  white-space: nowrap;
-  width: 920px;
-  height: 100px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-}
-
-.datesList > .col2 > .dateItem2 {
-  cursor: pointer;
-  position: relative;
-  float: left;
-  width: 70px;
-  height: 50px;
-  margin-left: 25px;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 50px;
-  color: #5f5f5f;
-  border-radius: 5px;
-}
 .picked {
   border: 2px solid black;
   background-color: #f5f5f5;
 }
-.datesList > .col1 {
-  cursor: pointer;
-  margin-top: 25px;
-  margin-right: 20px;
-  font-size: 50px;
-  position: relative;
-  float: left;
-}
-.datesList > .col2 {
-  margin-top: 25px;
-  position: relative;
-  float: left;
-}
-
-.datesList > .col3 {
-  cursor: pointer;
-  margin-top: 25px;
-
-  font-size: 50px;
-  position: relative;
-  float: right;
-}
-
-.movieContainer {
-  float: left;
-  border-bottom: 1px solid black;
-  width: 920px;
-  min-height: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.showtime-movie-title > .title {
-  font-size: 17px;
-  font-weight: bold;
-}
-.showtime-cinemasContainer {
-  margin-top: 10px;
-}
-.showtime-cinema {
-  position: relative;
-  clear: both;
-}
-.showtime-cinema > span {
-  font-weight: 500;
-  display: inline-block;
-  font-size: 13px;
-}
-.showtime-cinema > .right-icon2 {
-  position: relative;
-  font-size: 15px;
-  top: 3px;
-}
-.showtime-cinema > .col1 {
-  padding-right: 5px;
-  border-right: 1px solid black;
-}
-.showtime-cinema > .col2 {
-  padding-left: 5px;
-}
-.time-container {
-  cursor: pointer;
-  position: relative;
-  float: left;
-  border: 1px solid #b0b0b0;
-  width: 50px;
-  height: 45px;
-  text-align: center;
-  margin-left: 2px;
-}
-.time-container:hover {
-  background-color: #f0f0f0;
-  border: 1px solid black;
-}
-.time-item {
-  margin-top: 5px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.time-emptySeat {
-  font-weight: 400;
-  margin-top: 3px;
-  font-size: 13px;
-}
-/*selectbycinema*/
-
 /*scroll bar*/
 ::-webkit-scrollbar {
   width: 7px;
@@ -1622,3 +317,8 @@ body {
 }
 
 /*scroll bar end*/
+
+::selection {
+  background-color: rgb(255, 89, 70) !important;
+  color: rgb(255, 255, 255) !important;
+}

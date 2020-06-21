@@ -1,0 +1,145 @@
+@media screen and (max-width: 1001px) {
+    .Choice{
+        display: none;
+    }
+    .right-btn{
+        width: 100%;
+        padding: 0px 24px;
+        text-align: center;
+    }
+    .rightBtn, .gray{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1002px) {
+    .right-btn{
+        width: 240px;
+    }
+    .rightBtn{
+        width: 100px;
+    }
+}
+
+.bookInfoContainer {
+    position: fixed;
+    clear: both;
+    margin-top: 2px;
+    background-color: #17202a;
+    height: 137px;
+    background: #ff9201;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+}
+.Choice {
+    /* position: absolute; */
+    line-height: 90px;
+    /* padding-right: 50px; */
+    text-align: center;
+    /* margin-top: 20px; */
+    /* margin-top: 23.5px; */
+    margin: auto 0;
+    height: 100%;
+    /* width: 160px; */
+    font-size: 25px;
+    border-right: 1px solid white;
+    width: 240px;
+}
+.choicePh {
+    /* color: #cccccc; */
+    color: white;
+}
+
+.bookInfo {
+    position: relative;
+    padding-top: 20px;
+    /* width:  1100px; */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+    .mv {
+        /* margin-left: 0px; */
+    }
+        .movieSelected {
+            font-size: 18px;
+            color: white;
+            /* width: 190px; */
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    .se {
+        /* margin-left: 440px; */
+        color: #ededed;
+        }
+    .pay {
+        /* margin-left: 660px; */
+    }
+
+.th {
+    /* margin-left: 220px; */
+    color: #ededed;
+}
+    .theaterInfo {
+        position: relative;
+        margin-top: 5px;
+    }
+        .row {
+            line-height: 20px;
+            height: 22px;
+            font-size: 15px;
+            text-align: left;
+            color: white;
+            padding-left: 8px;
+        }
+            .content {
+                position: absolute;
+                float: left;
+                margin-left: 10px;
+                line-height: 20px;
+                font-size: 15px;
+                color: white;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 140px;
+            }
+            .content-time {
+                margin-left: 85px;
+            }
+.rightBtn {
+    cursor: pointer;
+    /* position: absolute; */
+    /* margin-left: 950px; */
+    margin: auto;
+    /* margin-top: 18px; */
+    border-radius: 20px;
+    height: 100px;
+    /* background: rgb(255, 89, 70); */
+}
+
+.content-seat {
+    position: relative;
+    width: 60px;
+    float: left;
+    text-align: left;
+}            
+.content-layer {
+    margin-left: 40px;
+}
+.seatSelectedContainer {
+    margin-left: 10px;
+    position: relative;
+    float: left;
+}
+.eachSeat {
+    position: relative;
+    float: left;
+}
+.price {
+    float: right;
+    text-align: right;
+    width: 70px;
+    font-weight: bold;
+}

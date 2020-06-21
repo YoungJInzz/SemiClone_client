@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let host = "54.180.181.212:8080";
+let host = "127.0.0.1:8005";
 
 export const getInit = () => axios.get(`http://${host}/ticket/screens`);
 
