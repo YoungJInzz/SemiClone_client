@@ -68,7 +68,7 @@ const Booking = ({
       className={
         "bookingContainer " +
         (InitState === true || getSCreensState === true ? "notClick" : "")
-      }
+      } 
     >
       <div className="booking-container">
         <img
@@ -204,6 +204,7 @@ const Booking = ({
       />
       <div className="test"></div>
     </div>
+    
   );
 };
 

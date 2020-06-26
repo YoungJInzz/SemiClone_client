@@ -17,6 +17,7 @@ import "./style/payment.css";
 import "./style/date.css";
 import "./style/bookInfo.css";
 import "./style/seat.css";
+import "./css.js";
 import rootReducer, { rootSaga } from "./modules";
 import ReduxThunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";

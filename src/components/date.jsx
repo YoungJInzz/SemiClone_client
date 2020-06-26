@@ -135,7 +135,7 @@ const Dates = ({
 
   return (
     <>
-      <div className="dateSection">
+      <div className="date-section">
         <div className="head">날짜</div>
         <div className="year">{year}</div>
         <div className={"month" + (beforeDates.length === 0 ? "hide" : "")}>

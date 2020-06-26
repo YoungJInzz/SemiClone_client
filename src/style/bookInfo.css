@@ -19,6 +19,16 @@
         width: 100px;
     }
 }
+@media screen and (max-width: 1415px) {
+    .bookInfoContainer {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1416px) {
+    .bookInfoContainer {
+        width: calc(100% - 250px);
+    }
+}
 
 .bookInfoContainer {
     position: fixed;
@@ -29,8 +39,8 @@
     background: #ff9201;
     bottom: 0px;
     z-index: 1;
-    width: 100%;
 }
+
 .Choice {
     /* position: absolute; */
     line-height: 90px;

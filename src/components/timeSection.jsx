@@ -15,7 +15,7 @@ const TimeSection = ({
   date,
 }) => {
   return (
-    <div className="timeSection">
+    <div className="time-section">
       <div className="head">시간</div>
       <div className="time-option">
         <span className="morning">
