@@ -50,13 +50,13 @@ const Main = () => {
       <header className="main-header">
         <div className="logotag" ref={ref1}>
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
-          <a className="logo" href="">
+          <a className="logo" href="http://www.cinerium.net/">
             <img src={Logo} alt=""></img>
           </a>
         </div>
         <nav className="navbar">
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
-          <a className="logo" href="">
+          <a className="logo" href="http://www.cinerium.net/">
             <img src={Logo} alt=""></img>
           </a>
         </nav>
