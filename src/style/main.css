@@ -9,6 +9,9 @@
     }
     .main-sidebar {
         transition: all 0.2s linear;
+
+        /* display: none; */
+
     }
     .bar-icon {
         transition: all 0.2s linear;

@@ -14,6 +14,9 @@
       justify-content: center;
   }
 }
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -103,15 +106,17 @@ body {
   margin: auto;
   /* --margin-left: 5px; */
   /* width: 1100px; */
-  width: 100%;
+
+
   z-index: 1;
+  width: 100%;
 }
 
 .step1 {
-  /* position: relative;
-  background-color: #ebedef;
-  height: 495px; */
-  padding: 0px 24px;
+
+  overflow: hidden;
+  margin: 0px 24px;
+
 }
 
 @media screen and (max-width: 1415px) {
@@ -214,6 +219,7 @@ body {
   color: #fbfcfc;
   margin-left: 25px;
   margin-top: 10px;
+
 }
 
 .check {
@@ -249,6 +255,7 @@ body {
   margin: 0 auto;
   border: 1px solid #ebedef;
 }
+
 .notAvail {
   background-color: #abb2b9;
   pointer-events: none;
