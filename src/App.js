@@ -5,9 +5,6 @@ import TimetableByCinemaContainer from "./containers/timetableByCinemaContainer"
 import BookingContainer from "./containers/bookingContainer";
 import BookingConatainerFromTimetable from "./containers/bookingFromTimetableContainer";
 const App = memo(() => {
-  useEffect(() => {
-    
-  }, []);
   return (
     <>
       <Main />

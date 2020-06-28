@@ -48,16 +48,15 @@ const Main = () => {
   return (
     <div>
       <header className="main-header">
-        
-        <div className="logotag" href="127.0.0.1:8005" ref={ref1}>
+        <div className="logotag" ref={ref1}>
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
-          <a className="logo" href="127.0.0.1:8005">
-            <img  src={Logo} alt=""></img>
+          <a className="logo" href="">
+            <img src={Logo} alt=""></img>
           </a>
         </div>
         <nav className="navbar">
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
-          <a className="logo" href="127.0.0.1:8005">
+          <a className="logo" href="">
             <img src={Logo} alt=""></img>
           </a>
         </nav>
@@ -68,8 +67,13 @@ const Main = () => {
             <IoMdPower className="powerIcon" />
           </div>
           <div className="loginForm">
-            <input className="loginInput" type="text" placeholder="아이디"></input>
-            <input className="loginInput"
+            <input
+              className="loginInput"
+              type="text"
+              placeholder="아이디"
+            ></input>
+            <input
+              className="loginInput"
               type="password"
               placeholder="비밀번호"
             ></input>
