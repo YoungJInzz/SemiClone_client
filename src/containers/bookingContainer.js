@@ -97,6 +97,21 @@ const BookingConatainer = ({
     getInitScreens();
     getScreens();
     getPoint({ id: "admin" });
+
+    /* React LifeCycle (init, destroy) => Control script file 
+     * React componentDidMount -> script file 추가
+     * React componentWillUnmount -> script file 삭제
+    */
+    const script = document.createElement("script");
+    
+    script.src = "dragging.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+    ////////////////////////////////////////////////////////////
   }, []);
 
   return (

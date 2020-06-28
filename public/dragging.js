@@ -1,8 +1,8 @@
-window.addEventListener("load", () => {
+//window.addEventListener("load", () => {
 
     var log = console.log;
 
-    const head = document.querySelector("head");
+    var head = document.querySelector("head");
     var style = document.createElement("style");
     head.appendChild(style);
     style.type = "text/css";
@@ -12,21 +12,19 @@ window.addEventListener("load", () => {
         style.appendChild(document.createTextNode(textNode));
     }
 
-    const container = document.querySelector(".step1");
+    var container = document.querySelector(".step1");
     
-    let dragging = false;
-    let mouseCursorXCoordinate = null;
+    var dragging = false;
+    var mouseCursorXCoordinate = null;
 
-    let targetBox = null;
-    let nextSiblingBox = null;
-    let previousSiblingBox = null;
+    var targetBox = null;
+    var nextSiblingBox = null;
+    var previousSiblingBox = null;
 
-    let targetBoxMargin = null;
-    let nextSiblingBoxMargin = null;
-    let previousSiblingBoxMargin = null;
+    var targetBoxMargin = null;
 
-    let activityRightBorder = null;
-    let activityLeftBorder = null;
+    var activityRightBorder = null;
+    var activityLeftBorder = null;
 
     container.onmousedown = (event) => {
         if(event.target.classList.contains("head")){
@@ -39,8 +37,6 @@ window.addEventListener("load", () => {
                     : targetBox.parentNode.lastChild;
             
             targetBoxMargin = targetBox.offsetLeft;
-            nextSiblingBoxMargin = targetBox.offsetLeft;
-            previousSiblingBoxMargin = targetBox.offsetLeft;
 
             activityRightBorder = (targetBox.nextSibling != null)
                     ? nextSiblingBox.offsetLeft + nextSiblingBox.offsetWidth/2
@@ -65,9 +61,6 @@ window.addEventListener("load", () => {
         
         nextSiblingBox = targetBox.nextSibling;
         previousSiblingBox = targetBox.previousSibling;
-        
-        nextSiblingBoxMargin = targetBox.offsetLeft;
-        previousSiblingBoxMargin = targetBox.offsetLeft;
 
         activityRightBorder = (targetBox.nextSibling != null)
                 ? nextSiblingBox.offsetLeft + nextSiblingBox.offsetWidth
@@ -75,7 +68,6 @@ window.addEventListener("load", () => {
         activityLeftBorder = (targetBox.previousSibling != null)
                 ? previousSiblingBox.offsetLeft
                 : null;
-        
         
         targetPageX = (event.target.className != "step1") ? event.pageX : targetPageX;
         targetOffsetX = (event.target.className != "step1") ? event.offsetX : targetOffsetX;
@@ -147,10 +139,8 @@ window.addEventListener("load", () => {
         previousSiblingBox = null;
 
         targetBoxMargin = null;
-        nextSiblingBoxMargin = null;
-        previousSiblingBoxMargin = null;
 
         mouseCursorXCoordinate = null;
     }
 
-});
+//});

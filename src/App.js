@@ -1,10 +1,13 @@
-import React, { memo } from "react";
+import React, { useEffect, memo } from "react";
 import Main from "./components/main";
 import { Route } from "react-router-dom";
 import TimetableByCinemaContainer from "./containers/timetableByCinemaContainer";
 import BookingContainer from "./containers/bookingContainer";
 import BookingConatainerFromTimetable from "./containers/bookingFromTimetableContainer";
 const App = memo(() => {
+  useEffect(() => {
+    
+  }, []);
   return (
     <>
       <Main />
