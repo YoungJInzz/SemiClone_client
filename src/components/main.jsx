@@ -18,14 +18,14 @@ const Main = () => {
 
   useEffect(() => {
     function watchResize() {
-      window.addEventListener("resize", setPayResultPosition);
+      window.addEventListener("resize", toggleSidebar);
     }
     watchResize();
     return () => {
-      window.removeEventListener("resize", setPayResultPosition);
+      window.removeEventListener("resize", toggleSidebar);
     };
   });
-  const setPayResultPosition = () => {
+  const toggleSidebar = () => {
     if (window.innerWidth < 1415) {
       ref1.current.style.transform = "translateX(-100%)";
       ref2.current.style.transform = "translateX(-100%)";

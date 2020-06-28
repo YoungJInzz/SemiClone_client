@@ -1,37 +1,50 @@
 @media screen and (max-width: 1001px) {
-    .time-section{
+   .time-section{
+
         width: 100%;
         margin-bottom: 16px;
     }
 }
 @media screen and (min-width: 1002px) {
+
     .time-section{
+
         width: 420px;
     }
 }
 
+
 /* time-section.jsx */
 .time-section {
+
     background-color: #fffaf0;
     height: 495px;
     position: relative;
     float: left;
     margin-right: 3px;
+
+
     background: white;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px, rgba(0, 0, 0, 0.03) 0px 2px 5px, rgba(0, 0, 0, 0.04) 0px 3px 7px, rgba(0, 0, 0, 0.04) 0px 7px 10px;
 }
+
 .time-section .head {
+
     font-size: 16px;
     font-weight: 600;
     height: 30px;
     text-align: center;
+
+
     background: #2A8FB4;
     border-radius: 8px 8px 0px 0px;
     line-height: 30px;
     color: white;
     width: 100%;
+
     cursor: pointer;
+
 }
 
 .time-option {
@@ -39,12 +52,15 @@
     margin-bottom: 10px;
     padding-left: 20px;
     padding-top: 20px;
+
+
 }
     .morning {
         margin-right: 15px;        ;
     }
         .sun {
             margin-top: 3px;
+
             color: #ff0000;
         }
         .moon {

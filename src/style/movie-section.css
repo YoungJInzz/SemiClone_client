@@ -35,7 +35,9 @@
     background: #2A8FB4;
     border-radius: 8px 8px 0px 0px;
     line-height: 30px;
+
     cursor: pointer;
+
 }
 .movie-section .select {
     margin-left: 15px;
