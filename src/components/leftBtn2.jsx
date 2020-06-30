@@ -7,7 +7,7 @@ const LeftBtn2 = ({ moveToBefore, currentStep }) => {
   };
   return (
     <div
-      className={"leftBtn" + (currentStep !== 3 ? " hide" : "")}
+      className="leftBtn"
       onClick={() => {
         handlePage();
       }}

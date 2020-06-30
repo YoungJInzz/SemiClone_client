@@ -13,14 +13,17 @@ const RightBtn1 = ({
   getSeatTable,
 }) => {
   return (
-    <div className="right-btn">
+    <div className={
+          "right-btn" +
+          (currentStep !== step ? " hide" : "")
+         }
+    >
       <div
         className={
           "rightBtn" +
           (movie !== "" && theater !== "" && date !== "" && timeData !== ""
             ? " red"
-            : " gray") +
-          (currentStep !== step ? " hide" : "")
+            : " gray")
         }
         onClick={() => {
           if (movie !== "" && theater !== "" && date !== "" && timeData !== "") {

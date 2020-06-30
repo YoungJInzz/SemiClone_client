@@ -36,26 +36,30 @@ const BookInfo = ({
 
   return (
     <div className="bookInfoContainer">
-      <LeftBtn1
-        setBookedToEmpty={setBookedToEmpty}
-        selectedSeats={selectedSeats}
-        moveToBefore={moveToBefore}
-        currentStep={currentStep}
-        selectAdult={selectAdult}
-        selectSenior={selectSenior}
-        selectTeen={selectTeen}
-        handleseatSelected={handleseatSelected}
-        handleseatSelectedIndex={handleseatSelectedIndex}
-        seatSelectedIndex={seatSelectedIndex}
-        handleSeatArr={handleSeatArr}
-        ticketTokens={ticketTokens}
-        changeTicketState={changeTicketState}
-      />
-      <LeftBtn2
-        moveToBefore={moveToBefore}
-        currentStep={currentStep}
-      ></LeftBtn2>
       <div className="bookInfo">
+        <div className={"left-btn" + (currentStep !== 2 ? " hide" : "")}>
+          <LeftBtn1
+            setBookedToEmpty={setBookedToEmpty}
+            selectedSeats={selectedSeats}
+            moveToBefore={moveToBefore}
+            currentStep={currentStep}
+            selectAdult={selectAdult}
+            selectSenior={selectSenior}
+            selectTeen={selectTeen}
+            handleseatSelected={handleseatSelected}
+            handleseatSelectedIndex={handleseatSelectedIndex}
+            seatSelectedIndex={seatSelectedIndex}
+            handleSeatArr={handleSeatArr}
+            ticketTokens={ticketTokens}
+            changeTicketState={changeTicketState}
+          />
+          </div>
+          <div className={"left-btn" + (currentStep !== 3 ? " hide" : "")}>
+            <LeftBtn2
+              moveToBefore={moveToBefore}
+              currentStep={currentStep}
+            ></LeftBtn2>
+          </div>
         <div className="mv Choice">
           <div className={"choicePh" + (movie !== "" ? " hide" : "")}>
             영화선택     
@@ -67,7 +71,7 @@ const BookInfo = ({
             className={
               "choicePh" + (theater !== "" || date !== "" ? " hide" : "")
             }
-          >
+          > 
             극장선택
           </div>
           <div
@@ -92,9 +96,9 @@ const BookInfo = ({
               </span>
               <span className="content-time">{time}</span>
             </div>
-            <div className="row">
+            <div className="row theater-line">
               <span className="content-title">상영관</span>
-              <span className={"content" + (screenName === "" ? " hide" : "")}>
+              <span className={"theater-content" + (screenName === "" ? " hide" : "")}>
                 {screenName}
               </span>
             </div>
@@ -109,14 +113,16 @@ const BookInfo = ({
           >
             좌석선택
           </div>
-          <div className={"row" + (seatSelected.length === 0 ? " hide" : "")}>
-            <span className="content-seat">좌석번호</span>
-            <div className="seatSelectedContainer">
-              {seatSelected.map((item) => (
-                <div className="eachSeat">
-                  <span>{item},</span>
-                </div>
-              ))}
+          <div className="seatInfo">
+            <div className={"seat-info-row" + (seatSelected.length === 0 ? " hide" : "")}>
+              <span className="content-seat">좌석번호</span>
+              <div className="seatSelectedContainer">
+                {seatSelected.map((item) => (
+                  <div className="eachSeat">
+                    <span>{item},</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -129,21 +135,21 @@ const BookInfo = ({
           >
             결제
           </div>
-          <div className={"row" + (person.adult === 0 ? " hide" : "")}>
+          <div className={"pay-info-row" + (person.adult === 0 ? " hide" : "")}>
             <span className="content-seat">일반</span>
             <span className="price">{person.adult * 1000} 원</span>
           </div>
-          <div className={"row" + (person.teen === 0 ? " hide" : "")}>
+          <div className={"pay-info-row" + (person.teen === 0 ? " hide" : "")}>
             <span className="content-seat">청소년</span>
             <span className="price">{person.teen * 1000} 원</span>
           </div>
-          <div className={"row" + (person.senior === 0 ? " hide" : "")}>
+          <div className={"pay-info-row" + (person.senior === 0 ? " hide" : "")}>
             <span className="content-seat">우대</span>
             <span className="price">{person.senior * 1000} 원</span>
           </div>
           <div
             className={
-              "row" +
+              "pay-info-row" +
               (person.adult + person.teen + person.senior === 0 ? " hide" : "")
             }
           >

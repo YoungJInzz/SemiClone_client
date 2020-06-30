@@ -15,34 +15,60 @@ const Main = () => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
+  var bookingContainer = null;
+  var bookInfoContainer = null;
 
   useEffect(() => {
+    
     function watchResize() {
       window.addEventListener("resize", toggleSidebar);
     }
     watchResize();
+    
     return () => {
       window.removeEventListener("resize", toggleSidebar);
     };
   });
   const toggleSidebar = () => {
+    bookingContainer = document.querySelector(".bookingContainer");
+    bookInfoContainer = document.querySelector(".bookInfoContainer");
     if (window.innerWidth < 1415) {
       ref1.current.style.transform = "translateX(-100%)";
       ref2.current.style.transform = "translateX(-100%)";
+      if(bookingContainer != null && bookInfoContainer != null){
+        bookingContainer.style.marginLeft = "0px";
+        bookInfoContainer.style.width = "100%";
+      }
     } else {
       ref1.current.style.transform = "translateX(0%)";
       ref2.current.style.transform = "translateX(0%)";
+      if(bookingContainer != null && bookInfoContainer != null){
+        bookingContainer.style.marginLeft = "250px";
+        bookInfoContainer.style.width = "calc(100% - 250px)";
+      }
     }
   };
   const toggle = () => {
+    bookingContainer = document.querySelector(".bookingContainer");
+    bookInfoContainer = document.querySelector(".bookInfoContainer");
     if (toggleState === false) {
       ref1.current.style.transform = "translateX(0%)";
       ref2.current.style.transform = "translateX(0%)";
+      if(bookingContainer != null && bookInfoContainer != null && window.innerWidth >= 1415){
+        bookingContainer.style.marginLeft = "250px";
+        bookInfoContainer.style.width = "calc(100% - 250px)";
+      }
       setToggleState(true);
+      // Open
     } else {
       ref1.current.style.transform = "translateX(-100%)";
       ref2.current.style.transform = "translateX(-100%)";
+      if(bookingContainer != null && bookInfoContainer != null && window.innerWidth >= 1415){
+        bookingContainer.style.marginLeft = "0px";
+        bookInfoContainer.style.width = "100%";
+      }
       setToggleState(false);
+      // Close
     }
   };
   return (
@@ -50,13 +76,15 @@ const Main = () => {
       <header className="main-header">
         <div className="logotag" ref={ref1}>
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
-          <a className="logo" href="http://www.cinerium.net/">
+          {/* <a className="logo" href="http://www.cinerium.net/"> */}
+          <a className="logo" href="127.0.0.1:3000">
             <img src={Logo} alt=""></img>
           </a>
         </div>
         <nav className="navbar">
           <FaBars className="bar-icon" onClick={toggle} ref={ref3} />
-          <a className="logo" href="http://www.cinerium.net/">
+          {/* <a className="logo" href="http://www.cinerium.net/"> */}
+          <a className="logo" href="127.0.0.1:3000">
             <img src={Logo} alt=""></img>
           </a>
         </nav>

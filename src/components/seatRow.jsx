@@ -59,7 +59,8 @@ const SeatRow = ({
       }
     };
     let returnValue = await axios.patch(
-      "http://54.180.181.212:8080/ticket/ticketstate",
+      // "http://54.180.181.212:8080/ticket/ticketstate",
+      "http://127.0.0.1:8005/ticket/ticketstate",
       {
         state: 0,
         tickets: [ticketId],
@@ -79,7 +80,6 @@ const SeatRow = ({
       <div className="opening-row-name">{rowName} </div>
       <div className="opening-seat">
         {rowArr.map((seat, Index) => (
-          <div>
             <div
               className={
                 "opening-item " +
@@ -96,7 +96,6 @@ const SeatRow = ({
             >
               {seat.seatNo.substring(1, 2)}
             </div>
-          </div>
         ))}
       </div>
     </div>

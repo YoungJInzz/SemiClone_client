@@ -1,18 +1,41 @@
+@media screen and (min-width: 1002px){
+    .seat-info {
+        flex-direction: row;
+    }
+    .seat-time-row {
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 1001px){
+    .seat-info {
+        flex-direction: column;
+    }
+    .seat-time-row {
+        flex-direction: column;
+    }
+}
+.seat-info {
+    background-color: white;
+    box-shadow: 0px 2px #bdbdbd;
+    width: 100%;
+    display: flex;
+}
 .seat-header {
+    border-radius: 8px 8px 0 0;
     position: relative;
     height: 35px;
-    width: 1100px;
-    background-color: #00001a;
+    width: 100%;
+    background-color: #006DFE;
     margin: 0 auto;
     text-align: center;
-    color: #e5e3d4;
+    color: white;
     font-size: 17px;
     font-weight: bold;
     line-height: 32px;
 }
 .refresh {
     cursor: pointer;
-    color: #e5e3d4;
+    color: white;
     float: right;
     width: 100px;
 }
@@ -27,55 +50,40 @@
     margin-top: 6px;
     position: relative;
     font-size: 20px;
-    color: #e5e3d4;
-}
-.seat-info {
-    height: 120px;
-    background-color: #f9efdc;
-    position: relative;
-    box-shadow: 0px 2px #bdbdbd;
+    color: white;
 }
 .seat-row {
-    height: 30px;
-    margin-bottom: 5px;
+    margin: 8px 18px 0px 18px;
+    /* margin-bottom: 5px; */
     clear: both;
+    display: flex;
+    justify-content: center;
 }
-.seat-person {
-    position: absolute;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 90px;
-    width: 470px;
-    border-right: 1px solid #cccccc;
-}
+
 .seat-row-title {
     color: #706e66;
     line-height: 25px;
     font-size: 13px;
-    float: left;
+    width: 35px;
 }
 .adult-person {
-    position: absolute;
-    margin-left: 50px;
-    float: left;
+    /* margin-left: 50px; */
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .adult-person > li {
     width: 23px;
     height: 23px;
-    margin-left: 10px;
-    float: left;
+    margin: 0px 8px 8px 0px;
 }
 .person-btn {
-    position: relative;
     cursor: pointer;
-    z-index: 1;
-    float: left;
     font-size: 13px;
     font-weight: bold;
-    width: 23px;
-    height: 23px;
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: 1px solid #cdcac5;
 }
@@ -84,35 +92,41 @@
     color: #e5e3d4;
 }
 .seat-time {
-    position: absolute;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    padding-left: 530px;
-    padding-right: 20px;
-    height: 90px;
-    width: 470px;
+    width: 100%;
+    margin: 14px 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    align-content: center;
+}
+.seat-person {
+    width: 100%;
+    border-right: 1px solid #cccccc;
+    
 }
 .seat-time-row {
-    width: 550px;
-    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 .seat-time-content {
-    position: relative;
-    float: left;
     padding-left: 10px;
     font-size: 13px;
+    margin-bottom: 8px;
 }
 .thea {
-    border-right: 1px solid #cccccc;
-    width: 100px;
+    /* border-right: 1px solid #cccccc; */
+    /* width: 100%; */
     white-space: nowrap;
     overflow: hidden;
+    flex: 1;
 }
 .scr {
-    border-right: 1px solid #cccccc;
-    width: 130px;
+    /* border-right: 1px solid #cccccc; */
+    /* width: 130px; */
     white-space: nowrap;
     overflow: hidden;
+    flex: 1;
 }
 .seat-time-time {
     position: relative;
@@ -122,70 +136,80 @@
     font-weight: bold;
     width: 135px;
 }
+
+.step2 {
+    background-color: #fffaf0;
+    border: 1px solid #ebedef;
+    margin: 0px 24px 137px 24px;
+    height: 100%;
+}
+
 .seat-main {
-    position: relative;
+    display: flex;
+    /* width: auto; */
+    margin-top: 20px;
+    margin: 20px 20px 20px 20px;
 }
-.seat-screen {
-    position: relative;
-    float: left;
-    margin-left: 80px;
-    width: 800px;
-    height: 400px;
-    padding-top: 30px;
-}
+    .seat-screen {
+        margin: auto;
+        flex: 1;
+    }
+        .screen-img {}
+        .opening-container {
+            display:flex;
+            flex-direction: column;
+            margin: 84px auto;
+        }
+            .opening-row {
+                clear: both;
+                margin: auto;
+                display: flex;
+            }
+                .opening-row-name {
+                    margin-right: 10px;
+                    width: 15px;
+                    float: left;
+                }
+                .opening-seat {
+                    display: flex;
+                }
+    .legend {
+        /* flex: 1; */
+    }
+        .legend-content {
+        }
+            .legend-row {
+                height: 35px;
+                display: flex;
+            }
+
+
 .screen-img {
-    position: relative;
     background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 3px,
-      #ccc 8px,
-      #ccc 5px
+    45deg,
+    transparent,
+    transparent 3px,
+    #ccc 8px,
+    #ccc 5px
     );
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    height: 25px;
-    line-height: 20px;
+    margin: auto;
+    width: 50%;
+    min-width: 145px;
+    /* height: 25px; */
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-.opening-container {
-    position: relative;
-    width: 600px;
-    height: 400px;
-    position: relative;
-    margin-top: 120px;
-    margin-left: 165px;
-    margin-right: auto;
-}
-.legend {
-    position: relative;
-    margin-left: 70px;
-    float: left;
-  
-    width: 100px;
-    height: 400px;
-}
-.legend-content {
-    position: relative;
-    margin-top: 90px;
-}
-.legend-row {
-    height: 35px;
-}
 .seat-icon-title {
     color: #706e66;
     font-size: 14px;
-    float: left;
+    line-height: 24px;
     margin-top: 1px;
     margin-left: 10px;
 }
-  
 .seat-icon-selected {
     position: relative;
-    float: left;
+    /* float: left; */
     margin-top: 5px;
     color: #c0392b;
 }
@@ -202,23 +226,7 @@
     margin-top: 5px;
     color: #808b96;
 }
-.opening-row {
-    position: relative;
-    margin-left: 150px;
-    position: relative;
-    clear: both;
-}
-.opening-row-name {
-    margin-right: 10px;
-    width: 15px;
-    position: relative;
-    float: left;
-}
-.opening-seat {
-    position: relative;
-  
-    margin-left: 20px;
-}
+
 .opening-item {
     border-bottom: 3px solid white;
     cursor: pointer;
@@ -229,8 +237,6 @@
     height: 18px;
     color: white;
     background-color: #566573;
-    position: relative;
-    float: left;
 }
 .opening-item:hover {
     background-color: #c0392b;

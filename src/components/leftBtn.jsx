@@ -32,7 +32,7 @@ const LeftBtn1 = ({
   };
   return (
     <div
-      className={"leftBtn" + (currentStep !== 2 ? " hide" : "")}
+      className="leftBtn"
       onClick={() => {
         changeTicketState({ state: "1", ticketTokens: ticketTokens });
         handlePage();
