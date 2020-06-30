@@ -90,7 +90,7 @@ const Seatselect2Section = ({
   return (
     <div>
       <div className="seat-header">
-        인원/좌석
+        인원 / 좌석
         <div className="refresh" onClick={() => refresh()}>
           <div className="refresh-title">다시하기</div>
           <IoMdRefresh className="refresh-icon" />

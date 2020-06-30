@@ -14,8 +14,17 @@
       justify-content: center;
   }
 }
-
-
+.bookingContainer {
+  margin-left: 250px;
+  max-width: 3000px;
+  padding-top: 90px;
+  transition: 0.4s;
+}
+@media screen and (max-width: 1415px) {
+  .bookingContainer {
+    margin-left: 0px;
+  }
+}
 
 body {
   margin: 0;
@@ -46,7 +55,7 @@ body {
   display: block;
 }
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .selected {
@@ -95,12 +104,7 @@ body {
   /* background-color: rgb(255, 89, 70); */
   background: #ffb34f;
 }
-.bookingContainer {
-  margin-left: 250px;
-  max-width: 3000px;
-  padding-top: 90px;
-  /* background-color: white; */
-}
+
 .booking-container {
   position: relative;
   margin: auto;
@@ -119,11 +123,7 @@ body {
 
 }
 
-@media screen and (max-width: 1415px) {
-  .bookingContainer {
-    margin-left: 0px;
-  }
-}
+
 
 .age2 {
   display: inline-block;
@@ -192,70 +192,24 @@ body {
   text-decoration: line-through;
   opacity: 0.5;
 }
-.rightBtn3 {
-  cursor: pointer;
-  position: absolute;
-  margin-left: 659px;
-  margin-top: 15px;
-  border-radius: 20px;
-  width: 200px;
-  height: 100px;
-}
-
-.leftBtn {
-  background-color: #808b96;
-  cursor: pointer;
-  position: absolute;
-  margin-top: 15px;
-  margin-left: 20px;
-  border-radius: 20px;
-  width: 100px;
-  height: 100px;
-}
-
 .rightArrow {
+  font-size: 50px;
+  color: #fbfcfc;
+  margin-top: 10px;
+}
+.check {
   position: relative;
   font-size: 50px;
   color: #fbfcfc;
-  margin-left: 25px;
   margin-top: 10px;
-
 }
-
-.check {
-  position: relative;
-  float: left;
-  font-size: 45px;
-  color: #fbfcfc;
-  margin-left: 25px;
-  margin-top: 24px;
-}
-
 .rightBtn-title {
   position: relative;
-  margin-left: 20px;
+  text-align: center;
   font-size: 15px;
   font-weight: bold;
   color: #fbfcfc;
 }
-.rightBtn3-title {
-  position: relative;
-  float: left;
-  margin-left: 10px;
-  margin-top: 30px;
-  font-size: 27px;
-  font-weight: bold;
-  color: #fbfcfc;
-}
-
-.step2 {
-  background-color: #fffaf0;
-  height: 595px;
-  width: 1100px;
-  margin: 0 auto;
-  border: 1px solid #ebedef;
-}
-
 .notAvail {
   background-color: #abb2b9;
   pointer-events: none;

@@ -3,9 +3,16 @@ import { FaCheck } from "react-icons/fa";
 
 const RightBtn3 = ({ title, currentStep, step }) => {
   return (
-    <div className={"rightBtn3 red" + (currentStep !== step ? " hide" : "")}>
-      <FaCheck className="check" />
-      <div className="rightBtn3-title">{title}</div>
+    <div 
+        className={
+          "right-btn" +
+          (currentStep !== step ? " hide" : "")
+        }
+    >
+      <div className="rightBtn red">
+        <FaCheck className="check" />
+        <div className="rightBtn-title">{title}</div>
+      </div>
     </div>
   );
 };

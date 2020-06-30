@@ -37,15 +37,15 @@ const Payment = ({ pointInfo, person }) => {
     let parentHeight = parentRef.current.clientHeight;
     let childHeight = childRef.current.clientHeight;
     let maxHeight = parentOffset + parentHeight - childHeight;
-    let val1 = 150 + maxHeight - parentOffset;
-    let val2 = 150 + target - parentOffset;
+    let val1 = 50 + maxHeight - parentOffset;
+    let val2 = 50 + target - parentOffset;
 
     if (target > maxHeight) {
       childRef.current.style.marginTop = `${val1}px`;
     } else if (target > parentOffset && target < maxHeight) {
       childRef.current.style.marginTop = `${val2}px`;
     } else {
-      childRef.current.style.marginTop = "150px";
+      childRef.current.style.marginTop = "50px";
     }
   };
 

@@ -14,18 +14,24 @@ const RightBtn2 = ({
     setTotalPerson(person.adult + person.teen + person.senior);
   }, [person]);
   return (
-    <div
-      className={
-        "rightBtn" +
-        (currentStep !== step ? " hide" : "") +
-        (totalPerson === seatSelected.length && totalPerson !== 0
-          ? " red"
-          : " gray")
-      }
-      onClick={() => moveToNext()}
+    <div 
+        className={
+          "right-btn" +
+          (currentStep !== step ? " hide" : "")
+        }
     >
-      <FaArrowRight className="rightArrow" />
-      <div className="rightBtn-title">{title}</div>
+      <div
+        className={
+          "rightBtn" +
+          (totalPerson === seatSelected.length && totalPerson !== 0
+            ? " red"
+            : " gray")
+        }
+        onClick={() => moveToNext()}
+      >
+        <FaArrowRight className="rightArrow" />
+        <div className="rightBtn-title">{title}</div>
+      </div>
     </div>
   );
 };

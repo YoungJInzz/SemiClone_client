@@ -79,7 +79,6 @@ const SeatRow = ({
       <div className="opening-row-name">{rowName} </div>
       <div className="opening-seat">
         {rowArr.map((seat, Index) => (
-          <div>
             <div
               className={
                 "opening-item " +
@@ -96,7 +95,6 @@ const SeatRow = ({
             >
               {seat.seatNo.substring(1, 2)}
             </div>
-          </div>
         ))}
       </div>
     </div>
